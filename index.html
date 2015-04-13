@@ -1,144 +1,213 @@
-<!DOCTYPE html> <!-- Start with the DOCTYPE declaration, which is different from the HTML tag -->
-<html> <!-- html tags wrap the entire document -->
-	<head>
-		<title>Restaurant Site</title> <!-- The title is what you will see in the top bar of your browser or your bookmarks -->
-		<meta charset="UTF-8"> <!-- meta tags give additional info about the site; this one tells what character set to use -->
-		<link rel="stylesheet" href="#">
-		<script src="#"></script>
-	</head>
-	<body> <!-- The visible content of the page goes in the body tags -->
-  <!-- When writing HTML, think of the way you want to organize your content. Since HTML is all about semantic structure then it's important to write for your content, not just the design. 
+<!DOCTYPE html>
+<html>
+
+  <head>
+  	<link href='http://fonts.googleapis.com/css?family=Raleway:600,200' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <script src="#"></script>
+  </head>
+
+  <body>
+  <header class="main-nav">
+    <nav>
+    <div class="container">
+      <a href="#">
+        <img src="" alt="Restaurant Site Logo" class="logo">
+      </a>
+      <ul class="navigation-links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#aboutus">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div> <!--container-->
+    <div class="clearfix"></div>
+    </nav>
+  </header>
+    
   
-  You can do a lot with CSS to change the presentation of a webpage - see http://www.csszengarden.com/ for examples of how the same HTML can look differently based on stylesheets.
-  -->
-		<header>
-			<nav> <!-- nav is an html5 element used for indicating the navigation section -->
-				<a href="#">
-					<img src="#" alt="Restaurant Site Logo"> <!-- always use alt text. It's not just for when the image is broken, but for screen readers and web crawlers (SEO) -->
-				</a>
-				<ul> <!-- Navigation links are always marked up as unordered lists - this is for screenreaders and other assistive technology to be able to accurately tab between each item -->
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">About</a></li>
-				</ul>
-			</nav>
-		</header>
+  
+  <div id="slider"> <!-- This will be a slider -->
+  	<h1 id="slider-text">Restaurant Site</h1>
+  	<a href="#menu" id="call_to_action">Menu</a>
+    <ul id="slides">
+      <li>
+        <img src="assets/bread.jpg" alt="Exterior of Restaurant Site">
+      </li>
+      <li>
+        <img src="" alt="Patio during the spring">
+      </li>
+      <li>
+        <img src="" alt="Dining area by the aquarium">
+      </li>
+      <li>
+        <img src="" alt="The bar">
+      </li>
+      <li>
+        <img src="" alt="Private event booked in the Blue Room">
+      </li>
+    </ul>
+    <span id="controls"> <!--spans are inline tags-->
+      <a href="#" id="prevSlide" class="arrow-bg">&lt;&lt;</a>
+      <a href="#" id="nextSlide" class="arrow-bg">&gt;&gt;</a>
+    </span>
+    <div class="clearfix"></div>
+  </div>
+  
+  <hr>
+   	<div class="container">
+      <section id="aboutus"> <!-- section is used to separate sections of a doc. Always use it with a heading to describe to interpretors what the section is for. Please note it should not be used for styling purposes - divs should be used for that. It's simply an example of semantic structure -->
+        <header>
+          <h2>About Us</h2>
+        </header>
+        <section>
+          <header>
+            <h3>The new all-American dining experience</h3>
+          </header>
+          <div>
+            <p>
+              Located in the heart of downtown <strong>Charlotte, NC</strong>, Restaurant Site is proud to offer the freshest, most savory dining experience you'll find in the Queen City. From burgers to steaks to succulent desserts, we're proud to offer a wide variety of items on our menu. Our cozy downtown location is open daily for <strong>breakfast, lunch, and dinner</strong>.
+            </p>
+            <a href="#">Historic story behind the restaurant >></a>
+          </div>
+        </section>
+        <div>
+          <h3>The team</h3>
+          <ul class="cards">
+            <li>Head Chef - Mark Matthews</li>
+            <li>Chef - Christy Thompson</li>
+            <li>Hostess - Leah Carmen</li>
+          </ul>
+          <a href="#">How we craft your dining experience >></a>
+        </div>
+      </section>
+      
+      <hr>
+      
+      <section id="menu">
+        <header>
+          <h2>Menu</h2>
+        </header>
+        <h3>Meals Served:</h3>
+        <ol>
+          <li>Breakfast: 7AM - 11AM</li>
+          <li>Lunch: 11AM - 4:30PM</li>
+          <li>Dinner: 4:30PM - 11PM</li>
+        </ol>
+      </section>
+  
+      <section>
+        <header>
+          <h3>Foods:</h3>
+        </header>
+        <ul>
+        <li>Appetizers</li> <!-- li is a list item -->
+        <li>Burgers & Sandwiches</li>
+        <li>Pancakes & Waffles</li>
+        <li>Sodas</li>
+        <li>Salads</li>
+        <li>Coffee & Tea</li>
+        <li>Soups</li>
+        <li>Steaks & Filets</li>
+        <li>A la carte</li>
+        <li>Desserts</li>
+      </ul>
+      
+      </section>
+      <hr>
+      <section id="contact">
+        <header>
+          <h2>Contact Us</h2>
+        </header>
+        <p>Please use the form to enter your message or make a reservation and we'll get back to you.</p> <!-- Generally speaking it's better to have as little fields as needed. We're only adding all these to go through the diff form elems -->
+        <p>Fields marked with an asterisk (*) are required.</p>
+        <form class="form">
+          <fieldset>
+            <legend>Contact Information:</legend>
+            <div> <!-- for attr is for screen reader and refers to the elm IDs-->
+              <label for="first_name">*First name:</label> <input type="text" placeholder="Enter your first name" id="first_name">
+            </div>
+            <br> <!-- line break; forces new line-->
+            <div>
+              <label for="last_name">*Last name:</label> <input type="text" placeholder="Enter your last name" id="last_name">
+            </div>
+            <br>
+            <div>
+              <label for="email_address">*Email Address:</label> <input type="email" placeholder="Enter your email" id="email_address">
+            </div>
+            <br>
+            <div>
+              <label for="phone_number">Phone Number:</label> <input type="text" placeholder="Enter your phone number" id="phone_number">
+            </div>
+            <br>
+          </fieldset>
+          <fieldset>
+            <legend>Message</legend>
+            <div>
+              <label for="message">*Message:</label> <textarea rows="4" cols="50" id="message">Enter message...</textarea>
+            </div>
+            <br>
+          </fieldset>
+          <fieldset>
+              <legend>How do you want us to contact you?</legend>
+              <input type="radio" name="contactmethod" value="email" id="email"> <label for="email">Email</label>
+              <br>
+              <input type="radio" name="contactmethod" value="phone" id="telephone"> <label for="telephone">Phone</label>
+            <br>
+          </fieldset>
+          <br>
+            <label for="discovery_method">How did you hear about us?</label>
+            <select id="discovery_method">
+              <option value="Google">Google</option>
+              <option value="Facebook">Facebook</option>
+              <option value="ads">Ads</option>
+              <option value="friend">Friend</option>
+            </select>
+          <br>
+          <div>
+              <input type="checkbox" value="false"> <label for="sign up for email specials">Sign me up to receive specials and coupons via email</label>
+            </div>
+            <br>
+            <button type="submit" class="btn red">Send message</button>
+          </form>
+          
+          <!-- More about fieldsets and legends: http://webaim.org/techniques/forms/controls -->
+      </section>
+      
+      <hr>
+    </div><!--container-->
+    
+    <footer class="footer">
+      <div class="container">
+        <h4>Site map</h4>
+        <ul class="sitemap"> <!-- Always use unordered lists for navigation and site maps -->
+          <li>
+            <a href="#">Home</a>
+            <a href="#aboutus">About Us</a>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <h4>Follow us on social media</h4>
+        <ul>
+          <li>
+            <img src="" alt="Facebook">
+          </li>
+          <li>
+            <img src="" alt="Twitter">
+          </li>
+          <li>
+            <img src="" alt="Instagram">
+          </li>
+        </ul>
+        <small>&copy; 2015 Restaurant Site</small>
+      </div><!--container-->
+    </footer>
+    
+  </body>
 
-		<h1>Restaurant Site</h1> <!-- headings are h1 - h6. Lower heading numbers indicate more important content such as section titles -->
-		<div id="slider"> <!-- This will be a slider -->
-			<ul id="slides">
-				<li><img src="#" alt="Patio of Restaurant Site"></li>
-				<li><img src="#" alt="Interior of Restaurant Site"></li>
-				<li><img src="#" alt="Party event in main room"></li>
-			</ul>
-			<span id="controls"> <!--spans are inline tags-->
-				<!-- comment -->
-				<a href="#">&lt; &lt;</a> <!-- This is the code for the less than ( < ) symbol -->
-				<a href="#">&gt; &gt;</a> <!-- code for the greater than symbol ( > ) -->
-			</span>
-		</div>
-		<hr> <!-- horizontal rule to segment the page -->
-		<section> <!-- section is just for semantics, to describe to developer and crawlers that this is a new section -->
-			<header>
-				<h2>About Us</h2>
-			</header>
-
-			<h3>Our History</h3>
-			<p>Located in the heart of downtown Charlotte, Restaurant Site offers a brand new dining experience.</p>
-			<a href="#">Historic story of the restaurant</a>
-
-			<h3>The team</h3>
-			<ul> <!-- ul is the outer tag for an unordered list. It tells the li (list item) element to create bullet points -->
-				<li>Head Chef - Bert Reynolds</li>
-				<li>Head Hostess - Kristy Carter</li>
-				<li>Chef - Lisa Thompson</li>
-			</ul>
-			<a href="#">How we craft your dining experience</a>
-		</section>
-		<hr>
-		<section>
-			<header>
-				<h2>Menu</h2>
-			</header>
-			<h3>Meals Served</h3>
-			<ol> <!-- ol is the tag for an ordered list. It tells the li element to create numbers -->
-				<li>Breakfast: 7AM - 11AM</li>
-				<li>Lunch: 11AM - 3:30PM</li>
-				<li>Dinner: 3:30PM - 11PM</li>
-			</ol>
-			<h3>Foods</h3>
-			<ul>
-				<li>Appetizers</li>
-				<li>Burgers</li>
-				<li>Seafood</li>
-				<li>Pancakes & Waffles</li>
-				<li>Sandwiches</li>
-				<li>Coffee & Tea</li>
-				<li>Wines</li>
-			</ul>
-		</section>
-		<hr>
-
-		<section>
-			<header>
-				<h2>Contact Us</h2>
-			</header>
-			<p>Please fill out the fields in the form below. Fields marked with an asterisk (*) are required.</p>
-			<form role="form"> <!-- form is the tag used to indicate all the following belongs to a form that will be submited to the server. Role is used for assistive technology to indicate that this is to be used as a form -->
-				<fieldset> <!-- fieldset groups related fields in the form -->
-					<legend>Contact Information:</legend> <!-- legend is used to describe the fieldset and the info it captures -->
-					<label for="firstname">First name:</label> <input type="text" id="firstname" placeholder="Enter your first name"> <!-- Use type="text" for short strings of text -->
-					<br>
-					<label for="lastname">Last name:</label> <input type="text" id="lastname" placeholder="Enter your last name">
-					<br>
-					<label for="email">Email:</label> <input type="email" id="email" placeholder="Enter email"> <!-- email is an html5 type that will help when writing JS validation to check for a valid email address; it also pops up a different keyboard on mobile -->
-					<br>
-					<label for="phone">Phone:</label> <input type="text" id="phone" placeholder="Enter phone">
-					<br>
-				</fieldset>
-				<fieldset>
-					<legend>Message:</legend>
-					<label for="message">Message body:</label> <textarea rows="4" cols="50" id="message">Enter message here</textarea> <!-- textarea should be used for larger chunks of text since it's more user friendly; you can tell it how tall (rows) and how wide (cols) to be -->
-				</fieldset>
-				<fieldset>
-					<legend>How do you want us to contact you?<legend>
-					<input type="radio" name="contactmethod" value="email" id="email"> <label for="email">Email</label> <!-- I forgot to cover it in class, but the name attribute for radio buttons is used to group the radio buttons so only one can be selected at a time-->
-					<br>
-					<input type="radio" name="contactmethod" value="phone" id="telephone"> <label for="telephone">Phone</label>
-					<br>
-				</fieldset>
-				
-				<label for="discovery_method">How did you hear about us?</label>
-				<select id="discovery_method"> <!-- select is the tag for a dropdown. Each line item in the dropdown is marked up using the option tag -->
-					<option value="Google">Google</option> <!-- The value attribute is used to send to the server; whatever you put inside the value attribute (even if it is different from the text between the tags) will be the value sent -->
-					<option value="Facebook">Facebook</option>
-					<option value="Friend">A Friend</option>
-					<option value="Ads">Ads</option>
-				</select>
-				<br>
-				<input type="checkbox" value="false" id="newsletter_signup"> <label for="newsletter_signup">Sign me up for the newsletter</label>
-				<br>
-				<button type="submit">Submit</button> <!-- Use type="submit" to tell the form that when this button is clicked, the data should be sent to the server (whatever script or page you would put in the action attribute on the form element if we had a back end. In other words, <form role="form" action="save.php"> where save.php is the file that will handle the data and connect to the backend) -->
-			</form>
-		</section>
-
-		<footer> <!-- footer is the element used for the end of the section or the bottom most section on the page -->
-			<h4>Site map</h4>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-
-			<h4>Social media</h4>
-			<ul>
-				<li>
-					<a href="#"><img src="#" alt="Facebook"></a>
-				</li>
-				<li>
-					<a href="#"><img src="#" alt="Twitter"></a>
-				</li>
-			</ul>
-			<small>&copy; 2015 Restaurant Site</small>
-		</footer>
-
-	</body>
 </html>

@@ -1,0 +1,243 @@
+/* Styles go here */
+
+html, body, header, section, nav, footer {
+  margin:0;
+  padding:0;
+  font-family:Raleway, Arial, sans-serif;
+  color:#1a1a1a;
+}
+
+section, footer, nav, header {
+  display:block;
+}
+
+section {
+  margin:1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight:normal;
+}
+
+h1 {
+  font-size:4em;
+}
+
+h2{
+  font-size:2em;
+}
+
+body{
+  /*background-image:url("assets/wood-grain.jpg");*/
+  background-color: #f1f1f1;
+}
+
+.container {
+ margin:0px 3em;
+}
+
+.clearfix{
+  clear:both;
+}
+
+.main-nav{
+  background-color:#1a1a1a;
+  min-height: 4em;
+  opacity:0.75;
+  position:fixed;
+  width:100%;
+  z-index: 9999;
+  
+}
+
+.logo{
+  float:left;
+  margin:10px 0 0 10px;
+}
+
+#slider-text {
+  position:absolute;
+  color:#fff;
+  left:35%;
+  top:20%;
+  padding:8px 15px;
+  background-color:rgba(0,0,0,0.5);
+}
+
+#call_to_action {
+  display:inline-block;
+  padding:8px 15px;
+  border:2px solid white;
+  border-radius:5px;
+  position:absolute;
+  min-width:150px;
+  text-align:center;
+  left:43%;
+  top:40%;
+  font-size:2em;
+  color:white;
+  text-decoration: none;
+  transition:0.4s linear all;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+
+}
+
+#call_to_action:hover{
+  border:2px solid #D41818;
+  background-color: #D41818;
+  transition:0.4s linear all;
+}
+
+#slider {
+  height: 600px;
+  overflow: hidden;
+}
+
+#slider ul{
+  margin:0;
+  padding:0;
+}
+
+#slider ul#slides li {
+  list-style-type: none;
+}
+
+#slider ul#slides img {
+  width:100%;
+}
+
+#controls > a{
+  text-decoration:none;
+  font-size:1.5em;
+  font-weight:bold;
+  color:rgba(255,255,255, 0.5);
+  position:absolute;
+  top:35%;
+  transition:0.5s linear all;
+}
+
+#controls > a:hover{
+  color:rgba(255,255,255,1);
+  transition:0.5s linear all;
+}
+
+#prevSlide {
+  left:1em;
+}
+
+#nextSlide{
+  right:1em;
+}
+
+.arrow-bg{
+  padding:12px 15px;
+  border-radius:50px;
+  background-color:rgba(0,0,0,0.75);
+  transition:0.5s linear all;
+}
+
+.arrow-bg:hover{
+  padding:12px 15px;
+  border-radius:50px;
+  background-color:rgba(0,0,0,1);
+  transition:0.5s linear all;
+}
+
+a > img {
+  border:none;
+}
+
+ul.navigation-links{
+  float:right;
+}
+
+ul.navigation-links > li {
+  list-style-type:none;
+  display:inline-block;
+  margin:0 1em 1em 0;
+}
+
+ul.navigation-links > li > a{
+  color:#ffffff;
+  text-decoration:none;
+  transition:0.5s linear all;
+}
+
+ul.navigation-links > li > a:hover{
+  color:#aaaaaa; /* Hexadecimal fallback*/
+  color:rgba(255,255,255,0.5);
+  transition: 0.5s linear all;
+}
+
+.cards li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right:1em;
+  min-width:200px;
+  min-height: 250px;
+  padding:10px;
+  background-color:brown;
+}
+
+.form {
+  background-color:#1a1a1a;
+  opacity:0.75;
+  padding:2em;
+  border:1px solid #9A5E1F;
+  color:#fff;
+}
+
+.form fieldset {
+  border:none;
+  padding:1em;
+  background-color:#eee;
+  color:#1a1a1a;
+}
+
+.form legend {
+  padding:0;
+  margin-bottom:1em;
+  position:relative;
+  top:1.4em;
+  font-weight:bold;
+}
+
+.form input[type="text"], .form input[type="email"], .form textarea{
+  background-color:#fff;
+  padding:0.5em;
+  border:1px solid #cdcdcd;
+  box-shadow:none;
+  width:50%;
+}
+
+
+.btn {
+  padding:0.5em 0.75em;
+  color:white;
+  border:2px solid white;
+  font-size:1.1em;
+  background:transparent;
+}
+
+.btn:hover{
+  cursor:pointer;
+}
+
+.red:hover {
+  background-color:#D41818;
+  color:#fff;
+  border-color:#8A0808;
+}
+
+.footer {
+}
+
+.footer .sitemap {
+  list-style-type: none;
+  display: inline-block;
+  margin-right:1em;
+}
+
+.footer .sitemap a {
+  text-decoration: none;
+}
