@@ -2,8 +2,9 @@
 <html>
 
   <head>
-  	<link href='http://fonts.googleapis.com/css?family=Raleway:600,200' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
+    <title>Restaurant Site | American Cuisine in Historic Uptown Charlotte, NC | Home</title>
+  	<link href='http://fonts.googleapis.com/css?family=Raleway:600,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/style.css">
     <script src="#"></script>
   </head>
 
@@ -32,12 +33,16 @@
     
   
   
-  <div id="slider"> <!-- This will be a slider -->
-  	<h1 id="slider-text">Restaurant Site</h1>
-  	<a href="#menu" id="call_to_action">Menu</a>
+  <div id="slider" class="row"> <!-- This will be a slider -->
+    <div class="col-25"></div>
+    <div class="col-50">
+      <h1 id="slider-text">Restaurant Site</h1>
+      <a href="#menu" id="call_to_action">View Our Menu</a>
+    </div>
+    <div class="col-25"></div>
     <ul id="slides">
       <li>
-        <img src="assets/bread.jpg" alt="Exterior of Restaurant Site">
+        <img src="assets/muffins.jpg" alt="Exterior of Restaurant Site"> <!-- was bread-->
       </li>
       <li>
         <img src="" alt="Patio during the spring">
@@ -184,27 +189,42 @@
     
     <footer class="footer">
       <div class="container">
-        <h4>Site map</h4>
-        <ul class="sitemap"> <!-- Always use unordered lists for navigation and site maps -->
-          <li>
-            <a href="#">Home</a>
-            <a href="#aboutus">About Us</a>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-        <h4>Follow us on social media</h4>
-        <ul>
-          <li>
-            <img src="" alt="Facebook">
-          </li>
-          <li>
-            <img src="" alt="Twitter">
-          </li>
-          <li>
-            <img src="" alt="Instagram">
-          </li>
-        </ul>
-        <small>&copy; 2015 Restaurant Site</small>
+
+        <section id="sitemap">
+          <h4>Site map</h4>
+          <ul class="sitemap-links"> <!-- Always use unordered lists for navigation and site maps -->
+            <li>
+              <a href="#">Home</a> |
+              <a href="#aboutus">About Us</a> |
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </section>
+
+        <section id="social">
+          <h4>Follow us on social media</h4>
+          <ul class="social-links">
+            <li>
+              <a href="#">
+                <img src="assets/fb.png" alt="Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="assets/twitter.png" alt="Twitter">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="assets/instagram.png" alt="Instagram">
+              </a>
+            </li>
+          </ul>
+        </section>
+        <div class="clearfix"></div>
+        <div class="row text-center">
+          <small id="copyright">&copy; 2015 Restaurant Site</small>
+        </div>
       </div><!--container-->
     </footer>
     

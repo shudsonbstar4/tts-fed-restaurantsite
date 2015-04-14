@@ -4,6 +4,7 @@ html, body, header, section, nav, footer {
   margin:0;
   padding:0;
   font-family:Raleway, Arial, sans-serif;
+  font-size: 1.05em;
   color:#1a1a1a;
 }
 
@@ -15,8 +16,9 @@ section {
   margin:1em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
   font-weight:normal;
+  font-family: "Raleway SemiBold", "Arial Bold", sans-serif;
 }
 
 h1 {
@@ -32,22 +34,68 @@ body{
   background-color: #f1f1f1;
 }
 
+a {
+  font-weight:normal;
+  font-family:"Raleway SemiBold", "Arial Bold", sans-serif;
+}
+
 .container {
- margin:0px 3em;
+  padding:0 15px;
+  margin:0 auto;
+}
+
+.container:before, .container:after{
+  display: table;
+  content: " ";
+}
+
+.container:after{
+  clear:both;
+}
+
+.row {
+  margin:0;
+}
+
+.row:before, .row:after{
+  display:table;
+  content: " ";
+}
+
+.row:after {
+  clear:both;
+}
+
+.col-25, .col-50{
+  min-height:1px;
+  padding:0px 15px;
+  margin:0 0 1em 0;
+  float:left;
+}
+
+.col-25 {
+  width:25%;
+}
+
+.col-50 {
+  width:50%;
 }
 
 .clearfix{
   clear:both;
 }
 
+.text-center{
+  text-align: center;
+}
+
 .main-nav{
   background-color:#1a1a1a;
   min-height: 4em;
-  opacity:0.75;
+  margin-bottom:1em;
   position:fixed;
   width:100%;
   z-index: 9999;
-  
 }
 
 .logo{
@@ -58,28 +106,29 @@ body{
 #slider-text {
   position:absolute;
   color:#fff;
-  left:35%;
-  top:20%;
-  padding:8px 15px;
+  left:33%;
+  top:25%;
+  padding:12px 19px;
+  margin:0;
   background-color:rgba(0,0,0,0.5);
 }
 
 #call_to_action {
   display:inline-block;
+  background-color:rgba(0, 0, 0, 0.25);
   padding:8px 15px;
   border:2px solid white;
   border-radius:5px;
   position:absolute;
   min-width:150px;
   text-align:center;
-  left:43%;
+  left:41%;
   top:40%;
   font-size:2em;
   color:white;
   text-decoration: none;
   transition:0.4s linear all;
   text-shadow:1px 1px 1px rgba(0,0,0,0.5);
-
 }
 
 #call_to_action:hover{
@@ -89,7 +138,7 @@ body{
 }
 
 #slider {
-  height: 600px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -130,15 +179,13 @@ body{
 }
 
 .arrow-bg{
-  padding:12px 15px;
+  padding:17px 15px;
   border-radius:50px;
   background-color:rgba(0,0,0,0.75);
   transition:0.5s linear all;
 }
 
 .arrow-bg:hover{
-  padding:12px 15px;
-  border-radius:50px;
   background-color:rgba(0,0,0,1);
   transition:0.5s linear all;
 }
@@ -229,15 +276,36 @@ ul.navigation-links > li > a:hover{
   border-color:#8A0808;
 }
 
-.footer {
-}
-
-.footer .sitemap {
+.footer .sitemap-links {
   list-style-type: none;
   display: inline-block;
   margin-right:1em;
 }
 
-.footer .sitemap a {
+.footer .sitemap-links a {
   text-decoration: none;
+}
+
+#sitemap {
+  float:left;
+}
+
+#social {
+  float:right;
+}
+
+ul.social-links > li {
+  list-style-type: none;
+  display:inline-block;
+  margin:0 1em 1em 0;
+}
+
+ul.social-links img {
+  width:50px;
+  height:50px;
+}
+
+#copyright{
+  font-family: "Raleway SemiBold", "Arial Bold", sans-serif;
+  padding-bottom:1em;
 }
