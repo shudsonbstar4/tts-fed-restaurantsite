@@ -1,72 +1,69 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>Restaurant Site | American Cuisine in Historic Uptown Charlotte, NC | Home</title> <!-- SEO friendly title - include name of page you're on -->
+			<link href='http://fonts.googleapis.com/css?family=Raleway:600,400' rel='stylesheet' type='text/css'> <!-- Google font link above stylesheet -->
+		<link rel="stylesheet" href="assets/style.css">
+		<script src="#"></script>
+	</head>
 
-  <head>
-    <title>Restaurant Site | American Cuisine in Historic Uptown Charlotte, NC | Home</title>
-  	<link href='http://fonts.googleapis.com/css?family=Raleway:600,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="#"></script>
-  </head>
-
-  <body>
-  <header class="main-nav">
-    <nav>
-    <div class="container">
-      <a href="#">
-        <img src="" alt="Restaurant Site Logo" class="logo">
-      </a>
-      <ul class="navigation-links">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#aboutus">About</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div> <!--container-->
-    <div class="clearfix"></div>
-    </nav>
-  </header>
+  	<body>
+	<header class="main-nav">
+		<nav>
+			<div class="container"> <!-- Instead of one container for whole page, use multiple containers inside header, main content, and footer so your background colors won't have a margin -->
+				<a href="#">
+					<img src="#" alt="Restaurant Site Logo" class="logo">
+				</a>
+				<ul class="navigation-links">
+					<li>
+					  <a href="#">Home</a>
+					</li>
+					<li>
+					  <a href="#aboutus">About</a> <!-- These are called anchor links. If you set an elm on the page with an id of the same name, it will take you directly to that elm. For instance, here I have my about section with: <section id="aboutus">...</section> -->
+					</li>
+					<li>
+					  <a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div> <!-- Clearing my floats for the logo and the menu links-->
+		</nav>
+	</header>
     
+	<div id="slider" class="row">
+		<div class="col-25"></div> <!-- One way of centering - I set empty cols the same width on either side of my main col -->
+		<div class="col-50">
+		  <h1 id="slider-text">Restaurant Site</h1>
+		  <a href="#menu" id="call_to_action">View Our Menu</a> <!-- call to action button-->
+		</div>
+		<div class="col-25"></div>
+		<ul id="slides">
+		  <li>
+		    <img src="assets/muffins.jpg" alt="Exterior of Restaurant Site">
+		  </li>
+		  <li>
+		    <img src="#" alt="Patio during the spring">
+		  </li>
+		  <li>
+		    <img src="#" alt="Dining area by the aquarium">
+		  </li>
+		  <li>
+		    <img src="#" alt="The bar">
+		  </li>
+		  <li>
+		    <img src="#" alt="Private event booked in the Blue Room">
+		  </li>
+		</ul>
+		<span id="controls">
+		  <a href="#" id="prev_slide" class="arrow-bg">&lt;&lt;</a>
+		  <a href="#" id="next_slide" class="arrow-bg">&gt;&gt;</a>
+		</span>
+		<div class="clearfix"></div>
+	</div>
   
-  
-  <div id="slider" class="row"> <!-- This will be a slider -->
-    <div class="col-25"></div>
-    <div class="col-50">
-      <h1 id="slider-text">Restaurant Site</h1>
-      <a href="#menu" id="call_to_action">View Our Menu</a>
-    </div>
-    <div class="col-25"></div>
-    <ul id="slides">
-      <li>
-        <img src="assets/muffins.jpg" alt="Exterior of Restaurant Site"> <!-- was bread-->
-      </li>
-      <li>
-        <img src="" alt="Patio during the spring">
-      </li>
-      <li>
-        <img src="" alt="Dining area by the aquarium">
-      </li>
-      <li>
-        <img src="" alt="The bar">
-      </li>
-      <li>
-        <img src="" alt="Private event booked in the Blue Room">
-      </li>
-    </ul>
-    <span id="controls"> <!--spans are inline tags-->
-      <a href="#" id="prevSlide" class="arrow-bg">&lt;&lt;</a>
-      <a href="#" id="nextSlide" class="arrow-bg">&gt;&gt;</a>
-    </span>
-    <div class="clearfix"></div>
-  </div>
-  
-  <hr>
+  	<hr>
    	<div class="container">
-      <section id="aboutus"> <!-- section is used to separate sections of a doc. Always use it with a heading to describe to interpretors what the section is for. Please note it should not be used for styling purposes - divs should be used for that. It's simply an example of semantic structure -->
+      <section id="aboutus">
         <header>
           <h2>About Us</h2>
         </header>
@@ -111,7 +108,7 @@
           <h3>Foods:</h3>
         </header>
         <ul>
-        <li>Appetizers</li> <!-- li is a list item -->
+        <li>Appetizers</li>
         <li>Burgers & Sandwiches</li>
         <li>Pancakes & Waffles</li>
         <li>Sodas</li>
@@ -129,15 +126,15 @@
         <header>
           <h2>Contact Us</h2>
         </header>
-        <p>Please use the form to enter your message or make a reservation and we'll get back to you.</p> <!-- Generally speaking it's better to have as little fields as needed. We're only adding all these to go through the diff form elems -->
+        <p>Please use the form to enter your message or make a reservation and we'll get back to you.</p>
         <p>Fields marked with an asterisk (*) are required.</p>
         <form class="form">
           <fieldset>
             <legend>Contact Information:</legend>
-            <div> <!-- for attr is for screen reader and refers to the elm IDs-->
+            <div>
               <label for="first_name">*First name:</label> <input type="text" placeholder="Enter your first name" id="first_name">
             </div>
-            <br> <!-- line break; forces new line-->
+            <br>
             <div>
               <label for="last_name">*Last name:</label> <input type="text" placeholder="Enter your last name" id="last_name">
             </div>
@@ -180,8 +177,6 @@
             <br>
             <button type="submit" class="btn red">Send message</button>
           </form>
-          
-          <!-- More about fieldsets and legends: http://webaim.org/techniques/forms/controls -->
       </section>
       
       <hr>
@@ -192,7 +187,7 @@
 
         <section id="sitemap">
           <h4>Site map</h4>
-          <ul class="sitemap-links"> <!-- Always use unordered lists for navigation and site maps -->
+          <ul class="sitemap-links">
             <li>
               <a href="#">Home</a> |
               <a href="#aboutus">About Us</a> |
@@ -229,5 +224,4 @@
     </footer>
     
   </body>
-
 </html>
